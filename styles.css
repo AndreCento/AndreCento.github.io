@@ -1,0 +1,37 @@
+body {
+  background-color: : white;
+  margin: 0px;
+}
+
+.page-header {
+  background-image: url(https://lifehag.files.wordpress.com/2016/05/ernc3a4hrungstipps_2016.jpg?w=1200);
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 750px;
+}
+
+.page-title {
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 130px;
+  text-align: center;
+  font-weight: 700;
+}
+
+h2 {
+  color: white;
+  font-family: 'Sanchez', serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
