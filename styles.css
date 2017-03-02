@@ -1,24 +1,24 @@
 body {
-  background-color: : white;
+  background-color: white;
   margin: 0px;
 }
 
 .page-header {
-  background-image: url(https://lifehag.files.wordpress.com/2016/05/ernc3a4hrungstipps_2016.jpg?w=1200);
+  background-image: url(./images/food-background-cropped.jpg);
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;    
   background-attachment: scroll;
   height: 750px;
 }
 
 .page-title {
-  margin-top: 0px;
+  margin-top: 0;
   padding-top: 20px;
-}
+}/*Can't move down h1 and h2, not sure if it's because Bootstrap is overwriting a style*/
 
 h1 {
   color: white;
@@ -26,6 +26,9 @@ h1 {
   font-size: 130px;
   text-align: center;
   font-weight: 700;
+    border-style: solid;
+    border-color: red;
+    
 }
 
 h2 {
@@ -34,4 +37,8 @@ h2 {
   font-size: 50px;
   font-weight: bold;
   text-align: center;
+     border-style: solid;
+    border-color: red;
 }
+
+
