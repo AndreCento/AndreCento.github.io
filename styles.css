@@ -1,24 +1,30 @@
 body {
-  background-color: white;
-  margin: 0px;
+  
+  margin: 0;
+}
+
+header#no-margin {
+    margin:0;
+
 }
 
 .page-header {
   background-image: url(./images/food-background-cropped.jpg);
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
+  margin: 0;
   background-repeat: no-repeat;
   background-size: cover;    
   background-attachment: scroll;
-  height: 750px;
+    min-height: 650px;
 }
 
-.page-title {
+#page-title {
   margin-top: 0;
-  padding-top: 20px;
-}/*Can't move down h1 and h2, not sure if it's because Bootstrap is overwriting a style*/
+  padding-top: 40px;
+}
+
+h2#h2-page-title {
+    padding-top: 40px;
+}
 
 h1 {
   color: white;
@@ -26,19 +32,64 @@ h1 {
   font-size: 130px;
   text-align: center;
   font-weight: 700;
-    border-style: solid;
-    border-color: red;
-    
 }
-
+    
 h2 {
   color: white;
   font-family: 'Sanchez', serif;
   font-size: 50px;
   font-weight: bold;
   text-align: center;
-     border-style: solid;
-    border-color: red;
+ 
 }
 
+nav ul {
+    color: white;
+    float: right;
+   
+  
+}
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    font-family: 'Sanchez', serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-right: 1.1em;
+} 
 
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffdb4d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:active {
+    color: #ffdb4d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.col-md-4 img.img-responsive {
+    padding-right: 0;
+}/*NOT WORKING*/
+
+div.container-fluid {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+div.recipes-row {
+    padding-bottom: 1.5em;
+}
+
+div#form-and-map {
+    background-color: #ffdb4d;
+    padding: 1.5em;
+}

@@ -17,44 +17,104 @@
     
 <body>
 
-<header>
+<div class="row"> <!--bootstrap col added to make header responsive, but it's not working as expected-->
+    <div class="col-md-12">
+<header id="no-margin">
 <div class="page-header">
-
-  <h1 class="page-title">Delivericious</h1>
-  <h2 class="page-title">Delicious recipes delivered right to you!</h2>
+    <nav>
+        <ul id="nav">
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+  <h1 id="page-title">Delivericious</h1>
+  <h2 id="h2-page-title">Delicious recipes delivered right to you!</h2>
+    
 </div>   
 </header>
+    </div>
+</div>
+              
 
-<div class="row">
-    <div class="col-sm-4">
-        <img class="img-responsive" class="img-size" src="./images/paella-cropped.jpg" alt="paella">
+<div class="container-fluid">
+
+<a name="recipes"></a>    
+<div class="row recipes-row">
+    <div class="col-md-4">
+        <img class="img-responsive" src="./images/paella-cropped.jpg" alt="paella">
     </div>
     
-    <div class="col-sm-4">
-        <img class="img-responsive" src="./images/tortilla-cropped.jpg" alt="tortilla>
+    <div class="col-md-4">
+        <img class="img-responsive" src="./images/tortilla-cropped.jpg" alt="tortilla">
     </div>
     
-    <div class="col-sm-4">
+    <div class="col-md-4">
         <img class="img-responsive" src="./images/chicken-cropped.jpg" alt="chicken">
     </div>
         
-</div>                                                             
-<div class="row">
-    <div class="col-sm-4">
-        <img class="responsive" src="./images/tiramisu-cropped.jpg" alt="tiramisu">
+</div>  
+    
+<div class="row recipes-row">
+    <div class="col-md-4">
+        <img class="img-responsive" src="./images/tiramisu-cropped.jpg" alt="paella">
     </div>
     
-    <div class="col-sm-4">
-        <img class="responsive" src="./images/focaccia-cropped.jpg" alt="focaccia">
+    <div class="col-md-4">
+        <img class="img-responsive" src="./images/focaccia-cropped.jpg" alt="tortilla">
     </div>
     
-    <div class="col-sm-4">
-        <img class="responsive" src="./images/lasagna-cropped.jpg" alt="lasagna">
+    <div class="col-md-4">
+        <img class="img-responsive" src="./images/lasagna-cropped.jpg" alt="chicken">
     </div>
         
 </div>  
-
     
+<a name="contact"></a> 
+<div class="row" id="form-and-map">
+    <div class="col-md-6">
+<form>
+  <div class="form-group">
+    <label for="user-name">Name</label>
+    <input type="text" class="form-control" id="user-name" placeholder="Your name">
+  </div>
+    
+    <div class="form-group">
+        <label for="user-email">E-mail</label>
+        <input type="email" class="form-control" id="user-email" placeholder="Your e-mail">
+    </div>
+    
+    <div class="form-group">
+        <label for="user-message">Message</label>
+        
+        <textarea rows="10 form="form" class="form-control">Type in your message</textarea>
+    </div>
+    
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+</form>
+    </div>
+        
+        <div class="col-md-6">
+             <div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYfu3oWQylRG3AgCUSAu1sAAQkMBvO5VE&callback=myMap"></script>                
+        </div>
+</div>
+    
+    </div> <!--closes class="container-fluid"-->
 
 </body>
 
