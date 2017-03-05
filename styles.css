@@ -1,35 +1,32 @@
 body {
-  
+  font-family: helvetica, sans-serif;
   margin: 0;
 }
 
-header#no-margin {
-    margin:0;
 
-}
-
+/*Header section*/
 .page-header {
   background-image: url(./images/food-background-cropped.jpg);
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;    
   background-attachment: scroll;
-    min-height: 650px;
+    min-height: 750px;
 }
 
-#page-title {
+h1#page-title {
   margin-top: 0;
   padding-top: 40px;
 }
 
 h2#h2-page-title {
-    padding-top: 40px;
+    padding-top: 2em;
 }
 
 h1 {
   color: white;
   font-family: 'Pacifico', cursive;
-  font-size: 130px;
+  font-size: 10em;
   text-align: center;
   font-weight: 700;
 }
@@ -37,18 +34,28 @@ h1 {
 h2 {
   color: white;
   font-family: 'Sanchez', serif;
-  font-size: 50px;
+  font-size: 3em;
   font-weight: bold;
   text-align: center;
- 
+ }
+
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
 }
 
+div#about h3 {
+    color: white;
+}
+
+/*Navigation bar in header*/
 nav ul {
     color: white;
     float: right;
-   
-  
 }
+
 nav ul li {
     list-style-type: none;
     display: inline;
@@ -57,7 +64,6 @@ nav ul li {
     font-size: 1.5em;
     padding-right: 1.1em;
 } 
-
 
 nav ul li a {
     color: white;
@@ -76,20 +82,46 @@ nav ul li a:active {
     text-decoration: none;
 }
 
-div.col-md-4 img.img-responsive {
-    padding-right: 0;
-}/*NOT WORKING*/
-
+/*Recipes section*/
 div.container-fluid {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
+    margin-bottom: 0;
 }
 
 div.recipes-row {
     padding-bottom: 1.5em;
 }
 
+/*Contact Us section*/
 div#form-and-map {
     background-color: #ffdb4d;
     padding: 1.5em;
+    margin-bottom: 1.5em;
 }
+
+p#map-heading {
+    font-weight: bold;
+}
+
+#contact-heading {
+    margin-top: 0;
+}
+
+/*About section*/
+div#about {
+    background-image: url(./images/about-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-attachment: scroll;
+    min-height: 100px;
+  }
+
+div#about p {
+    font-family: helvetica, sans-serif;
+    font-size: 1.2em;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    background-color: rgba(255, 255, 255, .9);
+}
+
