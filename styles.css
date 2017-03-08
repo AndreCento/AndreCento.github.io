@@ -46,9 +46,6 @@ h3 {
     text-align: center;
 }
 
-div#about h3 {
-    color: white;
-}
 
 /*Navigation bar in header*/
 nav ul {
@@ -93,6 +90,17 @@ div.recipes-row {
     padding-bottom: 1.5em;
 }
 
+p.recipe-title {
+    text-align: center;
+    font-family: 'Sanchez', serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color:#ff471a;
+    color: white;
+    margin-top: 0;
+    padding: 15px;
+}
+
 /*Contact Us section*/
 div#form-and-map {
     background-color: #ffdb4d;
@@ -110,18 +118,26 @@ p#map-heading {
 
 /*About section*/
 div#about {
-    background-image: url(./images/about-background.jpg);
+    background-image: url(./images/background-yellow.png);
     background-repeat: no-repeat;
     background-size: cover;    
     background-attachment: scroll;
     min-height: 100px;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    
   }
 
 div#about p {
     font-family: helvetica, sans-serif;
-    font-size: 1.2em;
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-    background-color: rgba(255, 255, 255, .9);
-}
+    font-size: 1.4em;
+    padding: 2.5em;
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    background-color: rgba(255, 255, 255, .5);
+    font-family: 'Sanchez', serif;
+    font-weight: bold;
+   }
 
