@@ -4,18 +4,20 @@
 	<meta charset="UTF-8">
 	<title>Delivericious</title><!-- Link to Bootstrap CDN. Latest compiled and minified CSS It has to be before the css style link, otherwise the layout doesn't work-->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!-- Suggested in the CSS/Overview section of the Bootstrap docs -->
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<link href="styles.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Sanchez:400i|Pacifico" rel="stylesheet">
 </head>
 <body>
-    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="./scripts/main.js"></script>
 	<div class="row">
 		<!--bootstrap col added to make header responsive, but it's not working as expected. CHECK-->
 		<div class="col-md-12">
 			<header>
 				<div class="page-header">
-					<nav>
+					<nav class="navbar navbar-light bg-faded">
 						<ul id="nav">
 							<li>
 								<a href="#recipes">Recipes</a>
@@ -26,28 +28,209 @@
 							<li>
 								<a href="#about">About</a>
 							</li>
-						</ul>
-					</nav>
+              <ul class="cart">
+      <li>
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      <a>Your order £<span><span id="basket-total">0.00</span></span></a>
+      </li>
+    </ul>
+  </nav>
 					<h1 id="page-title">Delivericious</h1>
-					<h2 id="h2-page-title">Choose a delicious recipe and have the ingredients delivered</h2>
 				</div>
-			</header>
 		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="row recipes-row" id="recipes">
-			<div class="col-md-4"><img alt="paella" class="img-responsive" src="./images/paella-cropped.jpg"></div>
-			<div class="col-md-4"><img alt="tortilla" class="img-responsive" src="./images/tortilla-cropped.jpg"></div>
-			<div class="col-md-4"><img alt="chicken" class="img-responsive" src="./images/chicken-cropped.jpg"></div>
-		</div>
-		<div class="row recipes-row">
-			<div class="col-md-4"><img alt="paella" class="img-responsive" src="./images/tiramisu-cropped.jpg"></div>
-			<div class="col-md-4"><img alt="tortilla" class="img-responsive" src="./images/focaccia-cropped.jpg"></div>
-			<div class="col-md-4"><img alt="chicken" class="img-responsive" src="./images/lasagna-cropped.jpg"></div>
-		</div>
+ </div>
+</header>
+
+<div class="description">
+  <h2 id="h2-page-title">Choose a delicious Italian or Spanish recipe and have the right ingredients delivered at your door!</h2>
+  <p><h3>Are you don't feel confident when it comes to choose all the ingredients for the Valecian Paella? Do you wish to prepare the real Lasagna like you'd have in Italy? Delivericious selects only the best ingredients for your fantastic Spanish and Italian recipes and we deliver it right to you!</h3></p>
+
+<div class="container-fluid">
+	<div class="row recipes-row" id="recipes">
+		<div class="col-md-4"><img alt="paella" class="img-responsive" src="./images/paella-cropped.jpg">
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#paella">Valencian Paella</button>
+  <button class="btn btn-primary buy-button">Buy it!</button>
+  <div class="modal fade" id="paella" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h4 class="modal-title" id="myModalLabel">Valencian Paella Box!</h4>
+          </div>
+          <div class="modal-body">
+            Ingredients for 4 people:
+            <ul>
+              <li>400 gr. chicken</li>
+              <li>300 gr. rabbit meat</li>
+              <li>240 gr. green beans</li>
+              <li>160 gr. “garrofón” (Valencian white beans)</li>
+              <li>65 gr. well chopped tomato</li>
+              <li>100 ml. oil</li>
+              <li>800 ml. water</li>
+              <li>20 gr. salt </li>
+              <li>2 gr. paprika powder</li>
+              <li>pinch of saffron</li>
+              <li>350 gr. Rice</li>
+            </ul>
+            Method: Cut the meat in pieces. Pour the oil and when it is very hot, add the meat. When it is fried golden, add tomato and stir everything until it is well fried. Add  the paprika powder and immediately afterwards add the water, vegetables, saffron and salt. Let it boil for 20 min.medium flame. Add the rice, distributing it very well all over in the “paellera”. Increase the heat for 10 min. and let it cook for a further 10 min.  on a low flame. The rice, will now have dried, but has to be left for several minutes before being served.
+          </div>
+        <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+    <div class="col-md-4"><img alt="tortilla" class="img-responsive" src="./images/tortilla-cropped.jpg">
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#tortilla">Spanish Tortilla</button>
+<button class="btn btn-primary buy-button">Buy it!</button>
+  <div class="modal fade" id="tortilla" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h4 class="modal-title" id="myModalLabel">Spanish Tortilla Box!</h4>
+          </div>
+          <div class="modal-body">
+            Ingredients for 4 people:
+            <ul>
+              <li>1 small onion</li>
+              <li>200 gr. Desiree potatoes</li>
+              <li>4 large eggs</li>
+              <li>1 teaspoon salt</li>
+              <li>1 tablespoon Spanish olive oil</li>
+            </ul>
+            Method:First of all, peel and cut the onion in half, then thinly slice each half and separate the layers into half-moon shapes. Now thinly pare the potatoes using a potato peeler and slice them into thin rounds – you have to work pretty quickly here because you don't want the slices to brown. When they are sliced, rub them in a clean tea cloth to get them as dry as possible. Now heat 1 tablespoon of the oil in the pan, and when it’s smoking hot add the onions and potatoes. Toss them around in the oil to get a good coating and add the salt and some freshly milled black pepper and a teaspoon of salt. Turn the heat down to low, put a lid on the pan and let them cook for 10–12 minutes or until tender. You can turn them over half way through and shake the pan from time to time. They are sort of stewing in the oil rather than browning. Meanwhile whisk 4 large eggs very lightly in a jug, then quickly add the cooked potatoes and onions and give them a good mix to coat with the egg. Then put the pan back on the heat and add half a tablespoon of oil, turning the heat up to medium to heat the oil. Now pour the whole lot back into the pan. Turn the heat down to low and give the tortilla 20-25 minutes without a lid, and from time to time push the edges in all round with a quite firmly with a palette knife in a vertical position to give it that traditional rounded edge. When it’s ready there will be virtually no liquid egg left – but you now need to turn it over or if you don’t fancy that it can be finished under the grill but its very easy to turn it. To do this use a flat lid, place it over the pan and invert to get the tortilla onto the lid. Put the pan back on the heat and use a palette knife to gently ease the tortilla back in. Give it 2 minutes, then turn the heat out and let it settle for 5 minutes.
+          </div>
+        <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+		<div class="col-md-4"><img alt="chicken" class="img-responsive" src="./images/chicken-cropped.jpg">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#chickenstew">Chicken Stew</button>
+      <button class="btn btn-primary buy-button">Buy it!</button>
+      <div class="modal fade" id="chickenstew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-title" id="myModalLabel">Chicken Stew Box!</h4>
+              </div>
+              <div class="modal-body">
+                Ingredients for 4 people:
+                <ul>
+                <li>1 tablespoon olive oil</li>
+                <li>500 gr. skinless and boneless chicken thigh fillets, cut into bite-size pieces</li>
+                <li>1 onion</li>
+                <li>2 red peppers</li>
+                <li>1 garlic clove</li>
+                <1i>sweet smoked paprika</li>
+                <li>2 x 400 gr. tins chopped tomatoes</li>
+                <li>400 gr. chicken stock</li>
+                <li>50 gr. black pitted olives</li>
+                <li>1 bay leaf</li>
+                <li>410 tin cannellini beans, drained and rinsed</li>
+                <li>fresh parsley</li>
+                Method: Heat oil in a large pan over high heat; fry chicken for 5min, turning occasionally until golden on all sides. Lift out on to a plate and set aside. Add onion and peppers to empty pan, lower heat and cook for 8-10min until softened. Add garlic and smoked paprika and fry for a min more, then stir in tomatoes, stock, olives, bay leaf and chicken. Bring to the boil; simmer for 45min-1hr until the chicken is tender. Stir in beans and parsley and check seasoning. Serve with rice or crusty bread or stirred into cooked pasta.
+              </div>
+            <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="row recipes-row">
+	<div class="col-md-4"><img alt="tiramisu" class="img-responsive" src="./images/tiramisu-cropped.jpg">
+   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#tiramisu">Tiramisù</button>
+   <button class="btn btn-primary buy-button">Buy it!</button>
+    <div class="modal fade" id="tiramisu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+           <h4 class="modal-title" id="myModalLabel">Tiramisù Box!</h4>
+            </div>
+            <div class="modal-body">
+              Ingredients for 4 people:
+              <ul>
+                <li>250 gr. mascarpone cheese</li>
+                <li>3 eggs, separated</li>
+                <li>15 lady fingers</li>
+                <li>200 ml espresso coffee, cooled</li>
+                <li>2 tablespoons sugar</li>
+                <li>2 tablespoons unsweetened cocoa powder</li>
+                <li>25 ml cognac or brandy</li>
+                Method: Add the sugar to the egg yolks. Beat well until the mixture is light and creamy. Add the mascarpone and half of the cognac or brandy, and beat well. With clean utensils, beat the egg whites until stiff. Fold the beaten egg whites into the mascarpone mixture. Pour espresso into a shallow dish along with the remaining cognac and 1 teaspoon of the cocoa powder. Stir well. Quickly dip each lady finger in the espresso mixture, working one at a time, and line the bottom of a glass dish, approximately 20cm round or square. Once the bottom of the dish is covered in an even layer of espresso-soaked lady fingers, top with 1/2 of the mascarpone mixture. Dust with 1/2 of the cocoa. Repeat with another lady finger layer, then finally the remaining mascarpone and a final dusting of cocoa powder. Chill in the fridge for about 4 hours, then serve!
+            </div>
+          <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+<div class="col-md-4"><img alt="focaccia" class="img-responsive" src="./images/focaccia-cropped.jpg">
+</div>
+<div class="col-md-4"><img alt="lasagna" class="img-responsive" src="./images/lasagna-cropped.jpg">
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#lasagna">Lasagne</button>
+  <button class="btn btn-primary buy-button">Buy it!</button>
+   <div class="modal fade" id="lasagna" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Lasagne Box!</h4>
+           </div>
+           <div class="modal-body">
+             Ingredients for 6-8 people:
+
+            <ul>For the pasta sheets:
+             <li>400 grams Flour “0”</li>
+             <li>4 eggs</li>
+           </ul>
+
+            <ul>For the Ragù:
+             <li>1 small carrot</li>
+             <li>1 white onion</li>
+             <li>1 small stalk of celery</li>
+             <li>2 tablespoons Extra Virgin olive oil</li>
+             <li>500 gr. ground beef</li>
+             <li>350 gr. ground pork</li>
+             <li>½ glass of white wine</li>
+             <li>salt</li>
+             <li>ground pepper</li>
+           </ul>
+
+            <ul>For the bechamel:
+             <li>1 liter (1 quart) of milk</li>
+             <li>100 gr. of butter</li>
+             <li>80 gr. all-purpose flour</li>
+             <li>a tiny pinch of nutmeg</li>
+             <li>salt</li>
+             <li>pepper</li>
+           </ul>
+           Method: Heat the butter and oil in a heavy saucepan or earthenware pot. Add the onion, and cook over moderate heat for 3-4 minutes. Add the pancetta, and cook until the onion is translucent. Stir in the carrot, celery and garlic. Cook for 3-4 minutes more. Add the beef, and crumble it into the vegetables with a fork. Stir until the meat loses its red colour. Season with salt and pepper. Pour in the wine, raise the heat slightly, and cook until the liquid evaporates, 3-4 minutes. Add the milk, and cook until it evaporates. Stir in the tomatoes with their juice, and the herbs. Bring the sauce to a boil. Reduce the heat to low, and simmer, uncovered for 1 ½ - 2 hours, stirring occasionally. Correct the seasoning and set aside once the sauce once prepared. You can make the sauce well in advance. It keeps well in the refrigerator for several days and can also be frozen. Butter a large shallow baking dish, preferably rectangular or square. Make the bechamel sauce by gently heating the milk with the bay leaf and mace in a small saucepan. Melt the butter in a medium heavy pan. Add the flour, and mix it in well with a wire whisk. Cook for 2-3 minutes. Strain the hot milk into the flour and butter mixture, and combine smoothly with the whisk. Bring the sauce to a boil, stirring constantly, and cook for 4-5 minutes more. Season with salt and pepper, and set aside. Make the pasta. Do not let it dry out before cutting it into rectangles approximately 11 cm. in wide and the same length as the baking dish (this will make it easier to assemble). Preheat the oven to 200°C. Bring a very large pan of water to a boil. Place a large bowl of cold water near the stove. Cover a large work surface with a tablecloth. Add salt to the rapidly boiling water. Drop in 3 or 4 of the egg pasta rectangles. Cook very briefly, about 30 seconds. Remove them from the pan using a slotted spoon, and drop them into the bowl of cold water for about 30 seconds. Pull them out of the water, shaking off the excess water. Lay them out flat without overlapping on the tablecloth. Continue with all the remaining pasta and trimmings. To assemble the lasagne, have all the elements at hand: the baking dish, béchamel and meat sauces, pasta strips, grated Parmesan and butter. Spread one large spoonful of the meat sauce over the bottom of the dish. Arrange a layer of pasta in the dish, cutting it with a sharp knife so that it fits well inside the dish. Cover with a thin of meat sauce, then one of béchamel. Sprinkle with a little cheese. Repeat the layers in the same order, ending with a layer of pasta coated with béchamel. Do not make more than about 6 layers of pasta. If you have left overs you can make another small lasagna in a little ovenproof dish. Use the pasta trimmings to patch any gaps in the pasta. Sprinkle the top with Parmesan, and dot with butter. Bake in the preheated oven for 20 minutes or until brown on top. Remove from the oven and allow to stand for 5 minutes before serving. Serve directly from the baking dish, cutting out rectangular or square sections for each helping. If you are using dried or bought pasta, boil the lasagne in just two batches, and stop the cooking about 4 minutes before the recommended cooking time on the package has elapsed. Rinse in cold water and lay the pasta out the same way as for the egg pasta.
+
+           </div>
+         <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       </div>
+      </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
 		<div class="row" id="form-and-map">
 			<div class="col-md-6">
-				<h3 id="contact-heading">Contact us</h3>
+				<h2 id="contact-heading">Contact us</h2>
 				<form>
 					<div class="form-group">
 						<label for="user-name">Name</label> <input class="form-control" id="user-name" placeholder="Your name" type="text">
@@ -56,7 +239,7 @@
 						<label for="user-email">E-mail</label> <input class="form-control" id="user-email" placeholder="Your e-mail" type="email">
 					</div>
 					<div class="form-group">
-						<label for="user-message">Message</label> 
+						<label for="user-message">Message</label>
 						<textarea class="form-control" form="contact" rows="10">How can we help you?</textarea>
 					</div>
 					<div class="form-group">
@@ -69,13 +252,14 @@
 			</div>
 		</div>
 		<div class="row" id="about">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<h3>About</h3>
-				<p>We are Andrea and Irene, students at Code First: Girls from Birkbeck University. We thought about sharing with you some of the most well-known Italian and Spanish recipes. You can buy the ingredients and have them delivered straight to your door, as we know you are very busy improving your coding skills!</p>
+
+				<div class="col-md-12">
+					<h3>About</h3>
+					<p>We are Andrea and Irene, students at Code First: Girls from Birkbeck University. We thought about sharing with you some of the most well-known Italian and Spanish recipes. You can buy all the ingredients you need for each recipe and have them delivered straight to your door, as we know you probably are very busy improving your coding skills!</p>
+	            </div>
+
 			</div>
-			<div class="col-md-4"></div>
-		</div>
 	</div>
+
 </body>
 </html>
