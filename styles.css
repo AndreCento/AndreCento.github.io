@@ -48,8 +48,6 @@ h3 {
     text-align: center;
 }
 
-
-
 /*Navigation bar in header*/
 nav ul {
     color: white;
@@ -121,6 +119,16 @@ div.recipes-row {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+
+p.recipe-title {
+    text-align: center;
+    font-family: 'Sanchez', serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color:#ff471a;
+    color: white;
+    margin-top: 0;
+    padding: 15px;
 }
 
 /*Contact Us section*/
